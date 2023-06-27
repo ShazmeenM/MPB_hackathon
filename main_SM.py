@@ -24,18 +24,16 @@ for guess in range(1,7):
         print("Congratulations, you guessed the correct answer.")
         break
     for i, char in enumerate(guess):
-        if answer[i] != guess[i]:
-            print("Error! The word must be 5 letters long.")
-        elif answer[i] == guess[i]:
+        if answer[i] == guess[i]:
             print(guess.replace(guess[i], termcolor.colored(guess[i], 'green')))
-            print("Wrong answer but green letter(s) is in the word and in the correct position.")
+            #print("Wrong answer but green letter(s) is in the word and in the correct position.")
         elif char in answer:
             print(guess.replace(guess[i], termcolor.colored(guess[i], 'yellow')))
-            print("Wrong answer but yellow letter(s) is in the word.")
-        else:
-            if char not in answer:
-                print(guess)
-                print("Wrong answer. None of the letters are in the word.")
+            #print("Wrong answer but yellow letter(s) is in the word.")
+        #else:
+            #if char not in answer:
+                #print(guess.replace(guess[i], termcolor.colored(guess[i], 'black')))
+                #print("Wrong answer. None of the letters are in the word.")
     
                 
 
