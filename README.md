@@ -12,3 +12,7 @@ Yellow (letter in the word but not in the correct position)
 4. Allow users to have a maximum of 6 guesses  
 5. Exit the game if the user gets it correct   
 6. Exit the game if maximum guesses have been reached
+
+# Software requirements
+
+Python, VSCode
