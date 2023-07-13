@@ -7,7 +7,7 @@ Modelling Best Practice Hackathon. This pipeline creates a version of the Wordle
 2. The game will ask you to guess a 5 letters long word in English.   
 3. You will have 6 attempts to guess the correct word.
 4. The game will exit if you have guessed the correct word. 
-5. The game will continue and returns each character in your guess with the following colors:
+5. The game will continue and returns each character in your guess with the following colors:  
 Black (letter not in the word)  
 Green (letter in the word and in the correct position)  
 Yellow (letter in the word but in the wrong position)  
