@@ -8,21 +8,37 @@ import string
 # Creating the word list
 word_list = ['Alert',  'Argue', 'Beach' , 'Begin' , 'Crash' , 'Crime' , 'Drink' , 'Drive' , 'Earth' , 'Empty' , 'Focus' , 'Force', 'Grass' , 'Green' , 'Heart' , 'Hotel' , 'Ideal' , 'Image', 'Juice' , 'Joint' , 'Known' , 'Knead', 'Large' , 'Light']
 
-# Guessing a random word from the list and saving the answer
-for word in word_list:
-    answer = random.choice(word_list)
-    answer = answer.lower()
+
+def get_random_word(word_list):
+    """
+    Function to guess a random word from a list of strings.
+    
+    Args:
+        word_list (list): A list of 5-letter words.
+    
+    Returns:
+        A random word from the word_list.
+        
+    """
+    for word in word_list:
+        return random.choice(word_list)
+
+# Calling the get_random_word function and storing the random word as answer
+answer = get_random_word(word_list)
+answer = answer.lower()
 
 def process_guess():
-    """Function to process the guess in the Wordle game. 
+    """
+    Function to process the guess in the Wordle game. The function allows 6 attempts to guess the answer.
+    The function will break when the user guess the correct answer or the maximum guesses have been reached.  
     
     Input:
         input (guess): 5 letters long word in English.
     
     Returns:
-        Letter in black color: if the letter is not in the correct word
-        Letter in green color: letter is in the correct word and in the correct position
-        Letter in yellow color: letter is in the correct word but at a different position
+        Letter in black color: if the letter is not in the correct answer
+        Letter in green color: letter is in the correct answer and in the correct position
+        Letter in yellow color: letter is in the correct answer but at a different position
         
     Raises:
         ValueError: if the number of letters in the guess is not equal to 5.
